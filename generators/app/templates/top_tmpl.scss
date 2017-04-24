@@ -1,0 +1,4 @@
+@import "mixin";
+.top{
+  @include wh(100px, 100px);
+}
