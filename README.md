@@ -14,6 +14,16 @@ Then generate your new project:
 
 ```bash
 yo weather-pc
+
+npm install|| yarn  安装
+
+npm run dev  开发
+npm run dist  发布
+npm run clear  清除dist目录
+npm run zip  打包dist目录
+npm run ftp-ww  发布外网ftp地址，请配置
+npm run ftp-wx  发布微信ftp地址，请配置
+
 ```
 
 ## Getting To Know Yeoman

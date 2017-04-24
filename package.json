@@ -8,7 +8,7 @@
     "email": "chenjinxinlove@gmail.com",
     "url": ""
   },
-  "repository": "chenjinxinlove/generator-weather-pc",
+  "repository": "https://github.com/chenjinxinlove/generator-weather-pc.git",
   "files": [
     "generators"
   ],
