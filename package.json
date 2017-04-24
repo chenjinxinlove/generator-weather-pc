@@ -1,6 +1,6 @@
 {
   "name": "generator-weather-pc",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "www.weather.com.cn",
   "homepage": "www.weather.com.cn",
   "author": {
@@ -8,6 +8,7 @@
     "email": "chenjinxinlove@gmail.com",
     "url": ""
   },
+  "repository": "chenjinxinlove/generator-weather-pc",
   "files": [
     "generators"
   ],
@@ -17,18 +18,21 @@
     "yeoman-generator"
   ],
   "devDependencies": {
-    "yeoman-test": "^1.6.0",
-    "yeoman-assert": "^3.0.0",
     "coveralls": "^2.12.0",
-    "nsp": "^2.6.3",
     "eslint": "^3.18.0",
     "eslint-config-xo-space": "^0.16.0",
     "jest": "^19.0.2",
-    "jest-cli": "^19.0.1"
+    "jest-cli": "^19.0.1",
+    "nsp": "^2.6.3",
+    "yeoman-assert": "^3.0.0",
+    "yeoman-test": "^1.6.0"
   },
   "dependencies": {
-    "yeoman-generator": "^1.0.0",
     "chalk": "^1.1.3",
+    "deep-extend": "^0.4.1",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^1.0.0",
     "yosay": "^2.0.0"
   },
   "jest": {
@@ -46,6 +50,5 @@
       "node": true
     }
   },
-  "repository": "chenjinxinlove/generator-weather-pc",
   "license": "MIT"
 }
