@@ -186,39 +186,20 @@ gulp.task('watch', function (done) {
 // var proName = process.env.npm_package_name;
 //注册 ftp 任务
 
-gulp.task('ftp-nw',function () {
-  gulp.src(['dist/*.html','dist/**/*.css','dist/**/*'])
-    .pipe(sftp(ftpConfig.nw))
-  gulp.src('dist/**/*.js')
-    .pipe(sftp(ftpConfig.nw))
-    .pipe(gutil.noop());
-});
-
-gulp.task('open-nw', function (done) {
-    gulp.src('')
-      .pipe(gulpOpen({
-        app: browser,
-        uri: 'http://10.0.120.212/chenjinxin/' + pathN
-      }))
-      .on('end', done);
-});
 
 gulp.task('ftp-ww',function () {
-  setTimeout(function () {
     gulp.src(['dist/*.html','dist/**/*.css','dist/**/*'])
       .pipe(sftp(ftpConfig.ww))
     gulp.src('dist/**/*.js')
       .pipe(sftp(ftpConfig.ww))
       .pipe(gutil.noop());
-  },1000)
-
 });
 
 gulp.task('open-ww', function (done) {
   gulp.src('')
     .pipe(gulpOpen({
       app: browser,
-      uri: 'http://club.weather.com.cn/ski/' + pathN + '/'
+       uri: ftpConfig.wwUrl + pathN + '/'
     }))
     .on('end', done);
 });
@@ -233,18 +214,14 @@ gulp.task('ftp-wx',function () {
 });
 
 gulp.task('open-wx', function (done) {
-  setTimeout(function () {
     gulp.src('')
       .pipe(gulpOpen({
         app: browser,
-        uri: 'http://wxtq.weather.com.cn/wx/' + pathN + '/'
+         uri: ftpConfig.wxUrl + pathN + '/'
       }))
       .on('end', done);
-  }, 10000)
 });
 
-//内网
-//gulp.task('ftp_nw',runSequence('clean','imgmin',['fileinclude', 'sassmin', 'build-js','fonts', 'json'],'md5:css', 'md5:js', 'ftp-nw', 'open-nw'));
 //外网
 gulp.task('ftp_ww', runSequence('clean','imgmin',['fileinclude', 'sassmin', 'build-js','fonts', 'json'], 'md5:css', 'md5:js','ftp-ww', 'open-ww'));
 //微信
